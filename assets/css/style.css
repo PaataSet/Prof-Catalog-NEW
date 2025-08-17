@@ -1,0 +1,1019 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* cursor: pointer; */
+  /* font-family: Noto Sans Georgian; */
+}
+a {
+  text-decoration: none;
+  all: unset;
+}
+body {
+  background-color: #f4f0f0;
+}
+.maincontainer {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  /* padding: 20px 20px 0px 20px; */
+  background-color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 48px;
+  background-color: #3366cc;
+  margin-top: 40px;
+  gap: 40px;
+}
+/* .lmlogo {s
+  font-size: 20px;
+  font-weight: 600;
+  color: #333333;
+} */
+
+.lmflagdiv {
+  display: flex;
+  color: white;
+  width: 44.66666793823242px;
+  height: 21px;
+  opacity: 1;
+  gap: 0px;
+  justify-content: center;
+  align-items: center;
+}
+.lmflagdiv img {
+  width: 18.666667938232422 px;
+  height: 14.000000953674316 px;
+  opacity: 1;
+  display: flex;
+  /* margin: 0; */
+}
+.lmge {
+  display: flex;
+  /* gap: 2px; */
+  /* margin: 0; */
+  margin-left: -25px;
+}
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  /* gap: 20px; */
+}
+.navbar li {
+  margin-right: 30px;
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+  /* font-family: "Helvetica Neue LT GEO Caps 75 Roman"; */
+  font-family: "Helvetica Neue LT GEO 65";
+  font-weight: 500;
+  font-style: 65 Medium;
+  font-size: 16px;
+  leading-trim: NONE;
+  line-height: 21px;
+  letter-spacing: 0%;
+  cursor: pointer;
+}
+.navbar li:last-child {
+  /* margin-right: 0; */
+}
+.lmfirstsection {
+  background-color: #ececec;
+  /* padding: 176px 48px; */
+}
+.lmfirstsecionwrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 48px;
+  margin-right: 20px;
+}
+.lmfirstsectionimage img {
+  width: 100%;
+  max-width: 370px;
+  height: 599.34px;
+  /* margin-right: 200px; */
+  /* margin-top: 0; */
+}
+.lmfirstsectionleft {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 34px;
+}
+.lmmaintitle {
+  font-family: "Helvetica Neue LT GEO Caps 75 Roman";
+  font-weight: 700;
+  font-style: 75 Bold;
+  font-size: 28px;
+  /* leading-trim: NONE; */
+  line-height: 36px;
+  letter-spacing: 5%;
+  color: #333333;
+}
+.lmfirstsectionleft p {
+  width: 100%;
+  max-width: 815px;
+
+  font-family: "Helvetica Neue LT GEO 55 roman";
+  font-weight: 400;
+  font-style: 55 Roman;
+  font-size: 18px;
+  leading-trim: NONE;
+  line-height: 23px;
+  letter-spacing: 0%;
+  color: #333333;
+}
+.lmbuttons {
+  display: flex;
+  gap: 18px;
+}
+.lmfirstbutton {
+  color: white;
+  width: 164;
+  height: 42;
+  angle: 0 deg;
+  opacity: 1;
+  gap: 8px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  border-radius: 8px;
+  background-color: #3366cc;
+  border-color: #3366cc;
+  font-family: "Helvetica Neue LT GEO Caps 75 Roman";
+  font-weight: 700;
+  font-style: 75 Bold;
+  font-size: 16px;
+  leading-trim: NONE;
+  line-height: 22px;
+  letter-spacing: 5%;
+  vertical-align: bottom;
+}
+.lmsecondbutton {
+  /* font-size: 20px;
+  font-weight: 500;
+  padding: 9px 8px 9px 8px;
+  width: 188px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: #ececec;
+  border-color: #3366cc; */
+
+  width: 164;
+  height: 42;
+  angle: 0 deg;
+  opacity: 1;
+  gap: 8px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  border-radius: 8px;
+  border-width: 1px;
+  font-family: "Helvetica Neue LT GEO Caps 75 roman";
+  font-weight: 700;
+  font-style: 75 Bold;
+  font-size: 16px;
+  leading-trim: NONE;
+  line-height: 22px;
+  letter-spacing: 5%;
+  vertical-align: bottom;
+  color: #333333;
+}
+.lmdirections {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 48px;
+  align-items: baseline;
+}
+.lmcards {
+  width: 100%;
+  max-width: 1344px;
+  margin-top: 30px;
+  margin-left: 48px;
+  margin-right: 48px;
+  display: flex;
+  gap: 23px;
+  flex-wrap: wrap;
+}
+.lmcatname {
+  font-weight: 700;
+  font-size: 28px;
+  margin-left: 48px;
+  margin-top: 40px;
+  font-family: "Helvetica Neue LT GEO Caps 75 roman";
+  line-height: 36px;
+  letter-spacing: 5%;
+  color: #333333;
+}
+.lmcategories img {
+  width: 30px;
+  height: 30px;
+}
+.lmcard1 {
+  width: 204px;
+  height: 188px;
+  /* padding: 75px 90px; */
+  background-color: #ececec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lmcard2 {
+  width: 204px;
+  height: 188px;
+  /* padding: 75px 90px; */
+  background-color: #ececec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lmcard3 {
+  width: 204px;
+  height: 188px;
+  /* padding: 75px 90px; */
+  background-color: #ececec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lmcard4 {
+  width: 204px;
+  height: 188px;
+  /* padding: 75px 90px; */
+  background-color: #ececec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lmcard5 {
+  width: 204px;
+  height: 188px;
+  /* padding: 75px 90px; */
+  background-color: #ececec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lmcard6 {
+  width: 204px;
+  height: 188px;
+  /* padding: 75px 90px; */
+  background-color: #ececec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lmname1 {
+  width: 204px;
+  border-radius: 8px;
+  /* border-radius: 15px; */
+  background-color: white;
+  border-color: #9c58d1;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 20px;
+  line-height: 22px;
+  margin-top: 12px;
+  margin-bottom: 50px;
+  line-height: 22px;
+  letter-spacing: 5%;
+  vertical-align: bottom;
+  font-family: "Helvetica Neue LT GEO Caps 75 roman";
+  color: #333333;
+  font-style: 75 Bold;
+}
+.lmname2 {
+  width: 204px;
+  border-radius: 8px;
+  background-color: white;
+  border-color: #ff944d;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 20px;
+  line-height: 22px;
+  margin-top: 12px;
+  margin-bottom: 50px;
+  line-height: 22px;
+  letter-spacing: 5%;
+  vertical-align: bottom;
+  font-family: "Helvetica Neue LT GEO Caps 75 roman";
+  color: #333333;
+}
+.lmname3 {
+  width: 204px;
+  border-radius: 8px;
+  background-color: white;
+  border-color: #3366cc;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 20px;
+  line-height: 22px;
+  margin-top: 12px;
+  margin-bottom: 50px;
+  line-height: 22px;
+  letter-spacing: 5%;
+  vertical-align: bottom;
+  font-family: "Helvetica Neue LT GEO Caps 75 roman";
+  color: #333333;
+}
+.lmname4 {
+  width: 204px;
+  border-radius: 8px;
+  background-color: white;
+  border-color: #2ca678;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 20px;
+  line-height: 22px;
+  margin-top: 12px;
+  margin-bottom: 50px;
+  line-height: 22px;
+  letter-spacing: 5%;
+  vertical-align: bottom;
+  font-family: "Helvetica Neue LT GEO Caps 75 roman";
+  color: #333333;
+}
+.lmname5 {
+  width: 204px;
+  border-radius: 8px;
+  background-color: white;
+  border-color: #ffc857;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 20px;
+  line-height: 22px;
+  margin-top: 12px;
+  margin-bottom: 50px;
+  line-height: 22px;
+  letter-spacing: 5%;
+  vertical-align: bottom;
+  font-family: "Helvetica Neue LT GEO Caps 75 roman";
+  color: #333333;
+}
+.lmname6 {
+  width: 204px;
+  border-radius: 8px;
+  background-color: white;
+  border-color: #ff6b6b;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 20px;
+  line-height: 22px;
+  margin-top: 12px;
+  margin-bottom: 50px;
+  line-height: 22px;
+  letter-spacing: 5%;
+  vertical-align: bottom;
+  font-family: "Helvetica Neue LT GEO Caps 75 roman";
+  color: #333333;
+}
+.dayprofwrapper {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  gap: 40px;
+  margin-right: 48px;
+}
+.daywrapperleft {
+  width: 100%;
+  max-width: 832px;
+  height: 181px;
+  margin-left: 48px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: baseline;
+}
+.daywrapperleft h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 30px;
+  font-family: "Helvetica Neue LT GEO Caps 75 roman";
+  font-weight: 700;
+  font-style: 75 Bold;
+  font-size: 28px;
+  leading-trim: NONE;
+  line-height: 36px;
+  letter-spacing: 5%;
+}
+.daywrapperleft p {
+  font-family: "Helvetica Neue LT GEO 55";
+  font-weight: 400;
+  font-style: 55 Roman;
+  font-size: 18px;
+  leading-trim: NONE;
+  line-height: 23px;
+  letter-spacing: 0%;
+  color: #333333;
+}
+.dayprofbtn {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 197px;
+  height: 48px;
+  border-radius: 12px;
+  padding: 10px 20px 10px 20px;
+  margin-top: 20px;
+  background-color: #3366cc;
+  border-color: #3366cc;
+  color: white;
+  font-size: 16px;
+  line-height: 150%;
+  font-family: "Helvetica Neue LT GEO Caps 75 Roman";
+}
+.lmwrapper2 {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  gap: 40px;
+}
+.lmwrapper2left {
+  width: 100%;
+  max-width: 440px;
+  /* background-color: #ececec; */
+  margin-left: 48px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.lmwrapper2left img {
+  width: 100%;
+  max-width: 440px;
+  height: 249px;
+  display: flex;
+  align-items: center;
+}
+.lmwrapper2right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 832px;
+  margin-right: 48px;
+  margin-bottom: 0px;
+}
+.lmwrapper2right h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 30px;
+  font-family: "Helvetica Neue LT GEO Caps 75 roman";
+  font-weight: 700;
+  font-style: 75 Bold;
+  font-size: 28px;
+  leading-trim: NONE;
+  line-height: 36px;
+  letter-spacing: 5%;
+}
+.lmwrapper2right p {
+  font-family: "Helvetica Neue LT GEO 55";
+  font-weight: 400;
+  font-style: 55 Roman;
+  font-size: 18px;
+  leading-trim: NONE;
+  line-height: 23px;
+  letter-spacing: 0%;
+  color: #333333;
+}
+.lmstartquiz {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 197px;
+  height: 48px;
+  border-radius: 12px;
+  padding: 10px 20px 10px 20px;
+  margin-top: 20px;
+  background-color: #3366cc;
+  border-color: #3366cc;
+  color: white;
+  font-size: 16px;
+  line-height: 150%;
+  font-family: "Helvetica Neue LT GEO Caps 75 Roman";
+
+  font-weight: 700;
+  font-style: 75 Bold;
+  line-height: 22px;
+  letter-spacing: 5%;
+  vertical-align: bottom;
+}
+.lmmainslider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  /* max-width: 1344px; */
+  height: 500px;
+}
+
+.lmslide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.lmslide.lmslideactive {
+  /* margin-bottom: 50px; */
+  display: block;
+}
+.lmdots {
+  margin-top: 100px;
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+}
+
+.lmdot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #dceeff;
+  border-radius: 50%;
+}
+.lmdot.lmactivedot {
+  background: #3366cc;
+}
+.lmwrapper3 {
+  display: flex;
+  width: 100%;
+  max-width: 1344px;
+  margin-left: 48px;
+  justify-content: space-between;
+  margin-top: 40px;
+  /* margin-bottom: 40px; */
+  gap: 40px;
+}
+.lmwrapper3left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.lmwrapper3left h1 {
+  font-weight: 700;
+  font-size: 28px;
+  /* margin-left: 48px; */
+  margin-bottom: 30px;
+  margin-top: 50px;
+  font-family: "Helvetica Neue LT GEO Caps 75 roman";
+  color: #333333;
+  font-weight: 700;
+  font-style: 75 Bold;
+  font-size: 28px;
+  leading-trim: NONE;
+  line-height: 36px;
+  letter-spacing: 5%;
+}
+
+.lmwrapper3left p {
+  width: 100%;
+  max-width: 1042px;
+  line-height: 23px;
+  font-size: 18px;
+  color: #333333;
+  font-family: "Helvetica Neue LT GEO 55 roman";
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0%;
+}
+
+.lmwrapper3left img {
+  width: 20px;
+  height: 20px;
+}
+.lm4png {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.lmceepreading {
+  width: 231px;
+  background-color: #3366cc;
+  color: white;
+  border-radius: 8px;
+  padding: 10px 20px 10px 20px;
+  gap: 8px;
+  display: flex;
+  font-family: "Helvetica Neue LT GEO Caps 75 roman";
+  font-weight: 700;
+  font-style: 75 Bold;
+  font-size: 16px;
+  leading-trim: NONE;
+  line-height: 22px;
+  letter-spacing: 5%;
+  vertical-align: bottom;
+  margin-top: 23px;
+}
+.lmceepreading img {
+  margin-left: 5px;
+}
+
+.lmwrapper3right {
+  display: flex;
+  flex-direction: column;
+  /* align-items: first baseline;just */
+  justify-content: flex-end;
+}
+.lmwrapper3right h1 {
+  font-family: "Helvetica Neue LT GEO Caps 75 roman";
+  font-weight: 700;
+  font-style: 75 Bold;
+  font-size: 18px;
+  leading-trim: NONE;
+  line-height: 23px;
+  letter-spacing: 5%;
+  color: #333333;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.lmwrapper3right h3 {
+  font-family: "Helvetica Neue";
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  leading-trim: NONE;
+  line-height: 21px;
+  letter-spacing: 0%;
+  color: #333333;
+}
+.historyphoto {
+  width: 230px;
+  height: 215px;
+}
+.lmdots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 16px;
+  opacity: 1;
+  gap: 8px;
+  margin: 0 auto;
+}
+
+/* --------------page2 ------------------------------------------- */
+
+.lmmissionsection {
+  margin-bottom: 50px;
+}
+.lmwrapper4 {
+  display: flex;
+  width: 100%;
+  max-width: 1344px;
+  margin-left: 48px;
+  justify-content: space-between;
+  margin-top: 100px;
+  gap: 40px;
+}
+.lmwrapper4left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 40px;
+}
+.lmwrapper4left h1 {
+  font-size: 28px;
+  color: #333333;
+  margin-bottom: 20px;
+  font-family: "Helvetica Neue LT GEO Caps 75 roman";
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 5%;
+}
+
+.lmwrapper4left p {
+  width: 100%;
+  max-width: 722px;
+  color: #333333;
+  font-family: "Helvetica Neue LT GEO 55 Roman";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0%;
+}
+.lmwrapper4left button {
+  width: 100%;
+  max-width: 294px;
+  height: 48px;
+  border-radius: 12px;
+  margin-top: 9px;
+  background-color: #6e6e6e;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+}
+.lmwrapper4right {
+  width: 100%;
+  max-width: 548px;
+  height: 395px;
+  background-color: #ececec;
+  margin-left: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lmwrapper4right img {
+  max-width: 548px;
+  width: 100%;
+  height: 367px;
+  display: flex;
+  align-items: center;
+}
+.lmwrapper5 {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.lmvissionsection {
+  margin-bottom: 100px;
+  /* display: flex; */
+}
+.lmwrapper5left {
+  width: 100%;
+  max-width: 548px;
+  height: 400px;
+  background-color: #ececec;
+  margin-left: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.lmwrapper5left img {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+}
+.lmwrapper5right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 722px;
+  margin-right: 48px;
+  /* margin-bottom: 0px; */
+  margin-top: 35px;
+}
+.lmwrapper5right h1 {
+  font-size: 28px;
+  color: #333333;
+  margin-bottom: 30px;
+  font-family: "Helvetica Neue LT GEO Caps 75 Roman";
+  font-weight: 700;
+  font-style: 75 Bold;
+  line-height: 36px;
+  letter-spacing: 5%;
+}
+.lmwrapper5right p {
+  line-height: 25px;
+  margin-bottom: 20px;
+  color: #333333;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.lmwrapper5right button {
+  width: 100%;
+  max-width: 294px;
+  height: 48px;
+  border-radius: 12px;
+  margin-top: 9px;
+  background-color: #6e6e6e;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+}
+.lmteamsection {
+  width: 100%;
+  max-width: 1344px;
+  margin-bottom: 30px;
+}
+.lmteamsection h1 {
+  margin-left: 46px;
+  font-size: 28px;
+  color: #333333;
+  font-family: "Helvetica Neue LT GEO Caps 75 roman";
+  font-weight: 700;
+  font-style: 75 Bold;
+  leading-trim: NONE;
+  line-height: 36px;
+  letter-spacing: 5%;
+}
+.lmteamwrapper {
+  flex-wrap: wrap;
+  display: flex;
+  width: 100%;
+  max-width: 1344px;
+  margin-left: 48px;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+.lmfullcycle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.lmonlycycle {
+  width: 204px;
+  height: 255px;
+  background-color: #ececec;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  /* border-radius: 100px; */
+  margin-bottom: 20px;
+}
+.lmfullcycle h6 {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+.lmfullcycle img {
+  width: 50px;
+  height: 50px;
+}
+
+/* ________________quiz____________________- */
+.lmquizsection {
+  border-top: 1px solid #ccc;
+  padding-top: 50px;
+  padding-bottom: 35px;
+  margin-right: 48px;
+  margin-left: 48px;
+}
+.lmquizsection h1 {
+  margin-bottom: 50px;
+  font-size: 28px;
+  font-weight: 700;
+}
+.lmprogressline {
+  display: flex;
+  justify-content: space-between;
+  /* padding-left: 48px;
+  padding-right: 48px; */
+  padding: 10px;
+  margin-bottom: 50px;
+  border-radius: 16px;
+}
+.lmprogressline .line {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  color: red;
+}
+.lmprogressline .line-active {
+  font-weight: bold;
+  color: green;
+}
+.lmmainquestion h2 {
+  margin-bottom: 30px;
+}
+.lmoption {
+  display: block;
+  margin: 8px 0;
+  padding: 15px;
+  border: 1px solid#ddd;
+  border-radius: 6px;
+  cursor: pointer;
+}
+/* -----------------fav section ------------------ */
+.lmfavsection {
+  margin-left: 46px;
+  margin-right: 46px;
+  margin-bottom: 48px;
+
+  border-top: 1px solid #ccc;
+  padding-top: 50px;
+}
+.lmfavhead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+.lmfilterwrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.lmfilterleft {
+  width: 100%;
+  max-width: 320px;
+  border-right: 1px solid #ccc;
+}
+.lmfilterleft h1 {
+  margin-bottom: 25px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.lmfiltertitle {
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  font-weight: bold;
+}
+.lmchoices {
+  width: 100%;
+  max-width: 294px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 70px;
+}
+.lmchoices button {
+  width: 90px;
+  padding: 5px 3px 5px 3px;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: white;
+  border-color: #f8f2f2;
+  border-radius: 10px;
+  /* font-weight: bolder; */
+}
+.lmfilterright {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-left: 40px;
+}
+.lmcardphoto {
+  width: 318px;
+  height: 260px;
+}
+.lmonlyinfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+footer {
+  /* border: solid black 1px; */
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 24px 48px;
+  background-color: #3366cc;
+  color: #ffffff;
+  width: 1440px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-content: center;
+  text-align: center;
+}
+
+.PS-Footer-div-1 {
+  /* border: solid red 1px; */
+  margin: 0 auto;
+  width: 1344px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.PS-Footer-contact-info {
+  /* border: solid red 1px; */
+  padding-left: 88px;
+  display: flex;
+  gap: 32px;
+  font-size: 14px;
+}
+
+.PS-Footer-social-networks {
+  display: flex;
+  gap: 16px;
+}
+
+.PS-Footer-div-2 {
+  border-top: solid white 1px;
+  height: 52px;
+  width: 1344px;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: end;
+  font-size: 14px;
+}

@@ -1,0 +1,676 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+bodY {
+  background-color: #f4f0f0;
+}
+
+header {
+  margin: 0 auto;
+  width: 1440px;
+  height: 72px;
+  align-content: center;
+  text-align: center;
+}
+
+/* ლელას კოდის დასაწყისი */
+
+/* * {
+    cursor: pointer;
+  } */
+
+a {
+  text-decoration: none;
+  all: unset;
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 48px;
+  background-color: #3366cc;
+  margin-top: 40px;
+  height: 70px;
+}
+.lmlogo {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333333;
+}
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+.navbar li {
+  margin-right: 30px;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 500;
+  border: solid #3366cc 3px;
+  padding: 16px 16px;
+}
+
+/* .PS-active-page {
+  border: solid #3366cc 3px;
+  border-bottom: solid #ffffff 3px;
+} */
+
+.navbar li:hover {
+  opacity: 0.5;
+  transition-duration: 0.2s;
+}
+.navbar li:last-child {
+  margin-right: 0;
+}
+
+/* ლელას კოდის დასასრული */
+
+.PS-section-list {
+  background-color: white;
+  margin: 0 auto;
+  width: 1440px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.PS-search {
+  margin: 0 auto;
+  width: 1440px;
+  height: 96px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 26px 0 16px;
+}
+
+.PS-fing-job-you-love {
+  font-family: "Helvetica Neue LT GEO Caps 75 Roman";
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: 5%;
+  color: #333333;
+}
+
+.PS-find {
+  display: flex;
+  align-items: center;
+}
+
+/* - - - - - - - - */
+/* .mystyle {
+  width: 100%;
+  padding: 25px;
+  background-color: coral;
+  color: white;
+  font-size: 25px;
+  box-sizing: border-box;
+} */
+
+/* - - - - - - - - */
+
+.PS-search-bar {
+  width: 302px;
+  height: 37px;
+  padding-top: 8px;
+  padding-right: 12px;
+  padding-bottom: 8px;
+  padding-left: 12px;
+  gap: 8px;
+  opacity: 1;
+  border: solid #808080 1px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-right: none;
+  outline: none;
+
+  font-family: "Helvetica Neue";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: 0%;
+}
+
+.PS-clearInput-button {
+  height: 37px;
+  width: 37px;
+  font-size: 20px;
+  border: solid #808080 1px;
+  border-left: none;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: transparent;
+  padding-bottom: 8px;
+}
+
+.PS-clearInput-button > img {
+  width: 24px;
+}
+
+.PS-find-button {
+  margin-left: 32px;
+  background-color: #3366cc;
+  color: #ffffff;
+  width: 102px;
+  height: 36px;
+  gap: 8px;
+
+  opacity: 1;
+  border-radius: 8px;
+
+  font-family: "Helvetica Neue LT GEO Caps 75 Roman";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 5%;
+}
+
+.PS-filter-result {
+  display: flex;
+}
+
+.PS-filter {
+  margin: 0 auto;
+  width: 366px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.PS-filter-name {
+  font-family: "Helvetica Neue LT GEO 75 Roman";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+  letter-spacing: 0%;
+  color: #333333;
+}
+
+.PS-filter-name-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 5px;
+}
+
+.PS-filter-sphere {
+  font-family: "Helvetica Neue LT GEO 65";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 0%;
+  color: #333333;
+}
+
+.PS-filter-choices {
+  font-family: "Helvetica Neue LT GEO Caps 55 Roman";
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+label {
+  display: inline-block;
+  cursor: pointer;
+  color: #3366cc;
+
+  font-family: "Helvetica Neue LT GEO 55 Roman";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: 0%;
+}
+
+#PS-more-less {
+  display: none;
+}
+
+#PS-more-less:checked ~ .PS-content {
+  display: flex;
+}
+
+#PS-more-less:checked ~ label {
+  display: none;
+}
+
+.PS-content {
+  /* border: solid red 1px; */
+  display: none;
+  font-family: "Helvetica Neue LT GEO Caps 55 Roman";
+  /* display: flex; */
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.PS-filter-choice {
+  box-shadow: 1px 1px 4px 0px #0000001a;
+  border: none;
+  /* background-color: #ffffff; */
+  opacity: 1;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  gap: 10px;
+  border-radius: 4px;
+  font-size: 12px;
+
+  font-family: "Helvetica Neue LT GEO Caps 55 Roman";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 5%;
+  color: #333333;
+}
+
+.PS-filter-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 294px;
+}
+
+.PS-filter-button-1 {
+  background-color: #3366cc;
+  color: #ffffff;
+  width: 141px;
+  height: 42px;
+
+  opacity: 1;
+  padding-top: 9px;
+  padding-right: 8px;
+  padding-bottom: 9px;
+  padding-left: 8px;
+  gap: 8px;
+  border-radius: 8px;
+  font-size: 14px;
+
+  font-family: "Helvetica Neue LT GEO Caps 75 Roman";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 5%;
+  color: #ffffff;
+}
+
+.PS-filter-button-2 {
+  background-color: transparent;
+  border: solid #3366cc 1px;
+  width: 141px;
+  height: 42px;
+
+  opacity: 1;
+  padding-top: 9px;
+  padding-right: 8px;
+  padding-bottom: 9px;
+  padding-left: 8px;
+  gap: 8px;
+  border-radius: 8px;
+  border-width: 1px;
+
+  font-family: "Helvetica Neue LT GEO Caps 75 Roman";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 5%;
+  color: #333333;
+}
+
+.PS-result {
+  margin: 0 auto;
+  padding-bottom: 48px;
+  width: 1005px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.PS-9-results {
+  height: 34px;
+
+  font-family: "Helvetica Neue LT GEO 75 Roman";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+  letter-spacing: 0%;
+  color: #333333;
+}
+
+.PS-result-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.PS-favorite {
+  /* background-color: greenyellow; */
+}
+
+.PS-favorite > .PS-heart-div {
+  background-color: yellow;
+}
+
+.PS-result-card {
+  width: 318px;
+  height: 497px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  box-shadow: 0px 2px 4px 0px #0000001a;
+  border-radius: 12px;
+  position: relative;
+}
+
+.PS-heart-div {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+
+  box-shadow: 0px 2px 4px 0px #0000001a;
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin: 12px;
+}
+
+.PS-card-info {
+  display: flex;
+  flex-direction: column;
+  width: 318px;
+  padding: 12px 0;
+}
+
+.PS-name {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 12px;
+}
+
+.PS-card-info-text-button {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+
+.PS-card-info-sub {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  width: 318px;
+}
+
+.PS-sphere {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 5px;
+}
+
+.PS-request {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: start;
+  padding: 5px;
+}
+
+.PS-salary {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: start;
+  padding: 5px;
+}
+
+.PS-card-info-button {
+  background-color: #3366cc;
+  color: #ffffff;
+  width: 294px;
+  height: 36px;
+  gap: 8px;
+  opacity: 1;
+  padding-right: 16px;
+  padding-left: 16px;
+  border-radius: 8px;
+
+  font-family: "Helvetica Neue LT GEO Caps 75 Roman";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 5%;
+  align-content: center;
+}
+
+.PS-name > h1 {
+  height: 90px;
+
+  font-family: "Helvetica Neue LT GEO Caps 75 Roman";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 5%;
+  color: #333333;
+}
+
+.PS-name > img {
+  width: 24px;
+  height: 24px;
+}
+
+.PS-card-info h3 {
+  font-family: "Helvetica Neue LT GEO 65";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: 0%;
+  color: #333333;
+}
+
+.PS-card-info h4 {
+  font-family: "Helvetica Neue LT GEO 55 Roman";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  color: #333333;
+}
+
+footer {
+  margin: 0 auto;
+  padding: 24px 48px;
+  background-color: #3366cc;
+  color: #ffffff;
+  width: 1440px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-content: center;
+  text-align: center;
+  font-family: "Helvetica Neue LT GEO 65";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0%;
+}
+
+.PS-Footer-div-1 {
+  margin: 0 auto;
+  width: 1344px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.PS-Footer-contact-info {
+  padding-left: 88px;
+  display: flex;
+  gap: 32px;
+  font-size: 14px;
+}
+
+.PS-Footer-social-networks {
+  display: flex;
+  gap: 16px;
+}
+
+.PS-Footer-div-2 {
+  border-top: solid white 1px;
+  height: 52px;
+  width: 1344px;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: end;
+  font-size: 14px;
+}
+
+/* ეს კოდი არის ანაზღაურების ფილტრისათვის (დასაწისი) */
+
+.container {
+  /* border: solid red 1px; */
+  margin-top: 24px;
+  background: #fff;
+  /* padding: 30px; */
+  /* border-radius: 10px; */
+  /* width: min(480px, 90%); */
+  width: 366px;
+  height: 37px;
+  /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25); */
+  display: flex;
+  align-items: center;
+}
+
+/* .container h3 {
+  font-size: 2rem;
+
+} */
+
+/* range slider styles */
+
+.range-slider {
+  /* border: solid red 1px; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  /* gap: 20px; */
+  /* padding-block: 20px; */
+}
+
+.range-slider.dragging {
+  /* border: solid red 1px; */
+  cursor: ew-resize;
+}
+
+.range-slider > input {
+  text-align: center;
+  border: solid #808080 1px;
+  /* border: none; */
+  /* outline: none; */
+  /* background: var(--gray-color); */
+  /* font-size: 1.5rem; */
+  /* padding: 0.5rem 1rem; */
+  border-radius: 8px;
+  /* max-width: 70px;
+  min-width: 30px; */
+  font-family: "Helvetica Neue LT GEO Caps 55 Roman";
+  width: 70px;
+  height: 37px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: 0%;
+}
+
+.range {
+  margin: -27px 0 0 77px;
+  /* border: solid red 1px; */
+  width: 58%;
+  display: grid;
+  position: relative;
+  z-index: 5;
+}
+
+.range input {
+  /* border: solid red 1px; */
+  grid-row: 2;
+  grid-column: 1;
+  pointer-events: none;
+  appearance: none;
+  background: transparent;
+}
+
+.range input::-webkit-slider-thumb {
+  /* border: solid red 1px; */
+  pointer-events: auto;
+  appearance: none;
+  width: 7px;
+  height: 7px;
+  background: #254b8c;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range input::-moz-range-thumb {
+  /* border: solid red 1px; */
+  pointer-events: auto;
+  appearance: none;
+  width: 7px;
+  height: 7px;
+  background: #254b8c;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider {
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #cccccc;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.progress {
+  position: absolute;
+  height: 100%;
+  background: #3366cc;
+  cursor: ew-resize;
+}
+
+/* For Search Code*/
+
+/* .item {
+  padding: 10px;
+  border: 1px solid #eee;
+  margin-bottom: 5px;
+}
+
+.item.hidden {
+  display: none;
+} */
+
+.PS-result-cards {
+  display: flex;
+  font-size: 10px;
+}
+
+.PS-result-card.hidden {
+  display: none;
+}
+
+/* ეს კოდი არის ანაზღაურების ფილტრისათვის (დასასრული) */

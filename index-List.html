@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="assets/Fonts/stylesheet.css" /> -->
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style-List.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html">
+        <div class="lmlogo">
+          <img src="assets/images/Vector.png" alt="" />
+        </div>
+      </a>
+      <nav class="navbar">
+        <ul>
+          <li>
+            <a href="index.html">მთავარი</a>
+          </li>
+          <li>
+            <a href="index-PDP.html">პროფესიები</a>
+          </li>
+          <li>
+            <a href="quiz.html">კარიერული ქვიზი</a>
+          </li>
+          <li>
+            <a href="about.html">ჩვენ შესახებ</a>
+          </li>
+          <li>
+            <a href="index-Contact.html">კონტაქტი</a>
+          </li>
+          <li>
+            <a href="favourites.html"
+              ><img src="assets/images/Heart.png" alt="" />
+              <div id="countDisplay"></div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="PS-section-list">
+      <div class="PS-search">
+        <div class="PS-fing-job-you-love">იპოვე შენი პროფესია</div>
+        <div class="PS-find">
+          <!-- <img src="assets/images/Search.png" alt="Search.png" /> -->
+          <input
+            class="PS-search-bar"
+            type="text"
+            id="mySearchInput"
+            onkeyup="filterContent()"
+            placeholder="მაგ. ციფრული მარკეტერი…"
+          />
+          <button class="PS-clearInput-button" onclick="clearInput()">
+            <img src="assets/images/Left arrow.png" alt="Left arrow.png" />
+          </button>
+          <button class="PS-find-button">მოძებნე</button>
+        </div>
+      </div>
+      <div class="PS-filter-result">
+        <div class="PS-filter">
+          <div class="PS-filter-name">ფილტრი</div>
+          <div class="PS-filter-name-content">
+            <div class="PS-filter-sphere">მიმართულება</div>
+            <div class="PS-filter-choices">
+              <button class="PS-filter-choice">დიზაინი</button>
+              <button class="PS-filter-choice">IT & DEVELOPMENT</button>
+              <button class="PS-filter-choice">HR</button>
+              <button class="PS-filter-choice">მარკეტინგი</button>
+              <button class="PS-filter-choice">მენეჯმენტი</button>
+              <button class="PS-filter-choice">გაყიდვები</button>
+            </div>
+          </div>
+          <div class="PS-filter-name-content">
+            <div class="PS-filter-sphere">ტექნიკური უნარები</div>
+            <div class="PS-filter-choices">
+              <input type="checkbox" id="PS-more-less" />
+              <button class="PS-filter-choice">Excel</button>
+              <button class="PS-filter-choice">Google Analytics</button>
+              <button class="PS-filter-choice">CRM სისტემები</button>
+              <button class="PS-filter-choice">HRIS სისტემები</button>
+              <button class="PS-filter-choice">LMS პლატფორმები</button>
+              <button class="PS-filter-choice">Figma</button>
+
+              <div class="PS-content">
+                <button class="PS-filter-choice">Excel</button>
+                <button class="PS-filter-choice">Google Analytics</button>
+                <button class="PS-filter-choice">CRM სისტემები</button>
+                <button class="PS-filter-choice">HRIS სისტემები</button>
+                <button class="PS-filter-choice">LMS პლატფორმები</button>
+                <button class="PS-filter-choice">Figma</button>
+                <button class="PS-filter-choice">Adobe Suite</button>
+                <button class="PS-filter-choice">
+                  3D გრაფიკული პროგრამები
+                </button>
+                <button class="PS-filter-choice">SEO ინსტრუმენტები</button>
+                <button class="PS-filter-choice">Meta Ads Manager</button>
+                <button class="PS-filter-choice">Google Ads</button>
+                <button class="PS-filter-choice">პროგრამული ენები</button>
+                <button class="PS-filter-choice">მონაცემთა ბაზები</button>
+                <button class="PS-filter-choice">SIEM სისტემები</button>
+                <button class="PS-filter-choice">ქსელური ინფრასტრუქტურა</button>
+                <button class="PS-filter-choice">
+                  ვიდეო მონტაჟის პროგრამები
+                </button>
+                <button class="PS-filter-choice">
+                  რეკრუტინგის ინსტრუმენტები
+                </button>
+                <label class="PS-more" for="PS-more-less">აკეცვა</label>
+              </div>
+              <label class="PS-less" for="PS-more-less">მეტის ნახვა</label>
+            </div>
+          </div>
+          <div class="PS-filter-name-content">
+            <div class="PS-filter-sphere">მოთხოვნა</div>
+            <div class="PS-filter-choices">
+              <button class="PS-filter-choice">მაღალი</button>
+              <button class="PS-filter-choice">სტაბილური</button>
+            </div>
+          </div>
+          <div class="PS-filter-name-content">
+            <div class="PS-filter-sphere">ანაზღაურება</div>
+            <div class="PS-filter-choices">
+              <button class="PS-filter-choice">დამწყები</button>
+              <button class="PS-filter-choice">საშუალო დონე</button>
+              <button class="PS-filter-choice">პროფესიონალი</button>
+              <div>
+                <div class="container">
+                  <!-- <h3>Filter by Price</h3> -->
+
+                  <!-- .range-slider -->
+                  <div class="range-slider">
+                    <input
+                      type="text"
+                      id="min-price-display"
+                      class="min-price"
+                      value="1000"
+                      min="0"
+                      max="16000"
+                      step="500"
+                    />
+                    <input
+                      type="text"
+                      id="max-price-display"
+                      class="max-price"
+                      value="15000"
+                      min="0"
+                      max="16000"
+                      step="500"
+                    />
+
+                    <!-- .range -->
+                    <div class="range">
+                      <input
+                        type="range"
+                        id="min-price-slider"
+                        class="min-input"
+                        value="1000"
+                        min="0"
+                        max="16000"
+                        step="500"
+                      />
+                      <input
+                        type="range"
+                        id="max-price-slider"
+                        class="max-input"
+                        value="15000"
+                        min="0"
+                        max="16000"
+                        step="500"
+                      />
+
+                      <!-- .slider -->
+                      <div class="slider">
+                        <div class="progress"></div>
+                      </div>
+                      <!-- /.slider -->
+                    </div>
+                    <!-- /.range -->
+                  </div>
+                  <!-- /.range-slider -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="PS-filter-buttons">
+            <button class="PS-filter-button-1">გაფილტრე</button>
+            <button class="PS-filter-button-2">გაასუფთავე</button>
+          </div>
+        </div>
+        <div class="PS-result">
+          <div class="PS-9-results">შეგირჩიე 22 პროფესია</div>
+          <div class="PS-result-cards" id="PS-result-cards">
+            <div class="PS-result-card" data-price="3000">
+              <div class="PS-heart-div">
+                <img src="assets/images/Card-Heart.png" alt="Card-Heart.png" />
+              </div>
+              <img
+                src="assets/images/3d გრაფიკოსი.png"
+                alt="3D გრაფიკოსი.png"
+              />
+              <div class="PS-card-info">
+                <div class="PS-name">
+                  <h1>3D გრაფიკოსი</h1>
+                  <img src="assets/images/Share.png" alt="Share.png" />
+                </div>
+                <div class="PS-card-info-text-button">
+                  <div class="PS-card-info-sub">
+                    <div class="PS-sphere">
+                      <h3>სფერო</h3>
+                      <h4>დიზაინი</h4>
+                    </div>
+                    <div class="PS-request">
+                      <h3>მოთხოვნა</h3>
+                      <h4>მაღალი</h4>
+                    </div>
+                    <div class="PS-salary">
+                      <h3>ანაზღაურება</h3>
+                      <h4>500 - 3000 ₾+</h4>
+                    </div>
+                  </div>
+                  <button class="PS-card-info-button">გაიგე მეტი</button>
+                </div>
+              </div>
+            </div>
+            <div class="PS-result-card" data-price="6000">
+              <div class="PS-heart-div">
+                <img src="assets/images/Card-Heart.png" alt="Card-Heart.png" />
+              </div>
+              <img
+                src="assets/images/front-end დეველოპერი.png"
+                alt="Front-End დეველოპერი.png"
+              />
+              <div class="PS-card-info">
+                <div class="PS-name">
+                  <h1>FRONT-END დეველოპერი</h1>
+                  <img src="assets/images/Share.png" alt="Share.png" />
+                </div>
+                <div class="PS-card-info-text-button">
+                  <div class="PS-card-info-sub">
+                    <div class="PS-sphere">
+                      <h3>სფერო</h3>
+                      <h4>IT & DEV</h4>
+                    </div>
+                    <div class="PS-request">
+                      <h3>მოთხოვნა</h3>
+                      <h4>მაღალი</h4>
+                    </div>
+                    <div class="PS-salary">
+                      <h3>ანაზღაურება</h3>
+                      <h4>500 - 6000 ₾+</h4>
+                    </div>
+                  </div>
+                  <button class="PS-card-info-button">გაიგე მეტი</button>
+                </div>
+              </div>
+            </div>
+            <div class="PS-result-card" data-price="3000">
+              <div class="PS-heart-div">
+                <img src="assets/images/Card-Heart.png" alt="Card-Heart.png" />
+              </div>
+              <img
+                src="assets/images/HR ადმინისტრირების სპეციალისტი.png"
+                alt="HR ადმინისტრირების სპეციალისტი.png"
+              />
+              <div class="PS-card-info">
+                <div class="PS-name">
+                  <h1>HR ადმინისტრირების სპეციალისტი</h1>
+                  <img src="assets/images/Share.png" alt="Share.png" />
+                </div>
+                <div class="PS-card-info-text-button">
+                  <div class="PS-card-info-sub">
+                    <div class="PS-sphere">
+                      <h3>სფერო</h3>
+                      <h4>HR</h4>
+                    </div>
+                    <div class="PS-request">
+                      <h3>მოთხოვნა</h3>
+                      <h4>მაღალი</h4>
+                    </div>
+                    <div class="PS-salary">
+                      <h3>ანაზღაურება</h3>
+                      <h4>1000 - 3000 ₾+</h4>
+                    </div>
+                  </div>
+                  <button class="PS-card-info-button">გაიგე მეტი</button>
+                </div>
+              </div>
+            </div>
+            <div class="PS-result-card" data-price="15000">
+              <div class="PS-heart-div">
+                <img src="assets/images/Card-Heart.png" alt="Card-Heart.png" />
+              </div>
+              <img
+                src="assets/images/hr მენეჯერი სპეციალისტი.png"
+                alt="hr მენეჯერი სპეციალისტი.png"
+              />
+              <div class="PS-card-info">
+                <div class="PS-name">
+                  <h1>HR მენეჯერი/ სპეციალისტი</h1>
+                  <img src="assets/images/Share.png" alt="Share.png" />
+                </div>
+                <div class="PS-card-info-text-button">
+                  <div class="PS-card-info-sub">
+                    <div class="PS-sphere">
+                      <h3>სფერო</h3>
+                      <h4>HR</h4>
+                    </div>
+                    <div class="PS-request">
+                      <h3>მოთხოვნა</h3>
+                      <h4>მაღალი</h4>
+                    </div>
+                    <div class="PS-salary">
+                      <h3>ანაზღაურება</h3>
+                      <h4>2500 - 15000 ₾+</h4>
+                    </div>
+                  </div>
+                  <button class="PS-card-info-button">გაიგე მეტი</button>
+                </div>
+              </div>
+            </div>
+            <div class="PS-result-card" data-price="4000">
+              <div class="PS-heart-div">
+                <img src="assets/images/Card-Heart.png" alt="Card-Heart.png" />
+              </div>
+              <img
+                src="assets/images/IT და TECH რეკრუტერი.png"
+                alt="IT და TECH რეკრუტერი.png"
+              />
+              <div class="PS-card-info">
+                <div class="PS-name">
+                  <h1>IT და Tech რეკრუტერი</h1>
+                  <img src="assets/images/Share.png" alt="Share.png" />
+                </div>
+                <div class="PS-card-info-text-button">
+                  <div class="PS-card-info-sub">
+                    <div class="PS-sphere">
+                      <h3>სფერო</h3>
+                      <h4>HR</h4>
+                    </div>
+                    <div class="PS-request">
+                      <h3>მოთხოვნა</h3>
+                      <h4>სტაბილური</h4>
+                    </div>
+                    <div class="PS-salary">
+                      <h3>ანაზღაურება</h3>
+                      <h4>800 - 4000 ₾+</h4>
+                    </div>
+                  </div>
+                  <button class="PS-card-info-button">გაიგე მეტი</button>
+                </div>
+              </div>
+            </div>
+            <div class="PS-result-card" data-price="4000">
+              <div class="PS-heart-div">
+                <img src="assets/images/Card-Heart.png" alt="Card-Heart.png" />
+              </div>
+              <img
+                src="assets/images/LEARNING & DEVELOPMENT.png"
+                alt="LEARNING & DEVELOPMENT.png"
+              />
+              <div class="PS-card-info">
+                <div class="PS-name">
+                  <h1>LEARNING & DEVELOPMENT</h1>
+                  <img src="assets/images/Share.png" alt="Share.png" />
+                </div>
+                <div class="PS-card-info-text-button">
+                  <div class="PS-card-info-sub">
+                    <div class="PS-sphere">
+                      <h3>სფერო</h3>
+                      <h4>HR</h4>
+                    </div>
+                    <div class="PS-request">
+                      <h3>მოთხოვნა</h3>
+                      <h4>სტაბილური</h4>
+                    </div>
+                    <div class="PS-salary">
+                      <h3>ანაზღაურება</h3>
+                      <h4>800 - 4000 ₾+</h4>
+                    </div>
+                  </div>
+                  <button class="PS-card-info-button">გაიგე მეტი</button>
+                </div>
+              </div>
+            </div>
+            <div class="PS-result-card" data-price="3000">
+              <div class="PS-heart-div">
+                <img src="assets/images/Card-Heart.png" alt="Card-Heart.png" />
+              </div>
+              <img
+                src="assets/images/seo სპეციალისტი.png"
+                alt="seo სპეციალისტი.png"
+              />
+              <div class="PS-card-info">
+                <div class="PS-name">
+                  <h1>SEO სპეციალისტი</h1>
+                  <img src="assets/images/Share.png" alt="Share.png" />
+                </div>
+                <div class="PS-card-info-text-button">
+                  <div class="PS-card-info-sub">
+                    <div class="PS-sphere">
+                      <h3>სფერო</h3>
+                      <h4>მარკეტინგი</h4>
+                    </div>
+                    <div class="PS-request">
+                      <h3>მოთხოვნა</h3>
+                      <h4>სტაბილური</h4>
+                    </div>
+                    <div class="PS-salary">
+                      <h3>ანაზღაურება</h3>
+                      <h4>800 - 3000 ₾+</h4>
+                    </div>
+                  </div>
+                  <button class="PS-card-info-button">გაიგე მეტი</button>
+                </div>
+              </div>
+            </div>
+            <div class="PS-result-card" data-price="5500">
+              <div class="PS-heart-div">
+                <img src="assets/images/Card-Heart.png" alt="Card-Heart.png" />
+              </div>
+              <img
+                src="assets/images/uxui დიზაინერი.png"
+                alt="uxui დიზაინერი.png"
+              />
+              <div class="PS-card-info">
+                <div class="PS-name">
+                  <h1>UX/UI დიზაინერი</h1>
+                  <img src="assets/images/Share.png" alt="Share.png" />
+                </div>
+                <div class="PS-card-info-text-button">
+                  <div class="PS-card-info-sub">
+                    <div class="PS-sphere">
+                      <h3>სფერო</h3>
+                      <h4>დიზაინი</h4>
+                    </div>
+                    <div class="PS-request">
+                      <h3>მოთხოვნა</h3>
+                      <h4>მაღალი</h4>
+                    </div>
+                    <div class="PS-salary">
+                      <h3>ანაზღაურება</h3>
+                      <h4>1500 - 5500 ₾+</h4>
+                    </div>
+                  </div>
+                  <button class="PS-card-info-button">გაიგე მეტი</button>
+                </div>
+              </div>
+            </div>
+            <div class="PS-result-card" data-price="5000">
+              <div class="PS-heart-div">
+                <img src="assets/images/Card-Heart.png" alt="Card-Heart.png" />
+              </div>
+              <img
+                src="assets/images/გენერალური მენეჯერი.png"
+                alt="გენერალური მენეჯერი.png"
+              />
+              <div class="PS-card-info">
+                <div class="PS-name">
+                  <h1>გენერალური მენეჯერი</h1>
+                  <img src="assets/images/Share.png" alt="Share.png" />
+                </div>
+                <div class="PS-card-info-text-button">
+                  <div class="PS-card-info-sub">
+                    <div class="PS-sphere">
+                      <h3>სფერო</h3>
+                      <h4>მენეჯმენტი</h4>
+                    </div>
+                    <div class="PS-request">
+                      <h3>მოთხოვნა</h3>
+                      <h4>სტაბილური</h4>
+                    </div>
+                    <div class="PS-salary">
+                      <h3>ანაზღაურება</h3>
+                      <h4>5000 ₾+</h4>
+                    </div>
+                  </div>
+                  <button class="PS-card-info-button">გაიგე მეტი</button>
+                </div>
+              </div>
+            </div>
+            <div class="PS-result-card" data-price="3000">
+              <div class="PS-heart-div">
+                <img src="assets/images/Card-Heart.png" alt="Card-Heart.png" />
+              </div>
+              <img
+                src="assets/images/გრაფიკული დიზაინერი.png"
+                alt="გრაფიკული დიზაინერი.png"
+              />
+              <div class="PS-card-info">
+                <div class="PS-name">
+                  <h1>გრაფიკული დიზაინერი</h1>
+                  <img src="assets/images/Share.png" alt="Share.png" />
+                </div>
+                <div class="PS-card-info-text-button">
+                  <div class="PS-card-info-sub">
+                    <div class="PS-sphere">
+                      <h3>სფერო</h3>
+                      <h4>დიზაინი</h4>
+                    </div>
+                    <div class="PS-request">
+                      <h3>მოთხოვნა</h3>
+                      <h4>მაღალი</h4>
+                    </div>
+                    <div class="PS-salary">
+                      <h3>ანაზღაურება</h3>
+                      <h4>500 - 3000 ₾+</h4>
+                    </div>
+                  </div>
+                  <button class="PS-card-info-button">გაიგე მეტი</button>
+                </div>
+              </div>
+            </div>
+            <div class="PS-result-card" data-price="7000">
+              <div class="PS-heart-div">
+                <img src="assets/images/Card-Heart.png" alt="Card-Heart.png" />
+              </div>
+              <img
+                src="assets/images/კიბერუსაფრთხოების ანალიტიკოსი.png"
+                alt="კიბერუსაფრთხოების ანალიტიკოსი.png"
+              />
+              <div class="PS-card-info">
+                <div class="PS-name">
+                  <h1>კიბერუსაფრთხოების ანალიტიკოსი</h1>
+                  <img src="assets/images/Share.png" alt="Share.png" />
+                </div>
+                <div class="PS-card-info-text-button">
+                  <div class="PS-card-info-sub">
+                    <div class="PS-sphere">
+                      <h3>სფერო</h3>
+                      <h4>IT & DEV</h4>
+                    </div>
+                    <div class="PS-request">
+                      <h3>მოთხოვნა</h3>
+                      <h4>მაღალი</h4>
+                    </div>
+                    <div class="PS-salary">
+                      <h3>ანაზღაურება</h3>
+                      <h4>2000 - 7000 ₾+</h4>
+                    </div>
+                  </div>
+                  <button class="PS-card-info-button">გაიგე მეტი</button>
+                </div>
+              </div>
+            </div>
+            <div class="PS-result-card" data-price="8000">
+              <div class="PS-heart-div">
+                <img src="assets/images/Card-Heart.png" alt="Card-Heart.png" />
+              </div>
+              <img
+                src="assets/images/კიბერუსაფრთხოების სპეციალისტი.png"
+                alt="კიბერუსაფრთხოების სპეციალისტი.png"
+              />
+              <div class="PS-card-info">
+                <div class="PS-name">
+                  <h1>კიბერუსაფრთხოების სპეციალისტი</h1>
+                  <img src="assets/images/Share.png" alt="Share.png" />
+                </div>
+                <div class="PS-card-info-text-button">
+                  <div class="PS-card-info-sub">
+                    <div class="PS-sphere">
+                      <h3>სფერო</h3>
+                      <h4>IT & DEV</h4>
+                    </div>
+                    <div class="PS-request">
+                      <h3>მოთხოვნა</h3>
+                      <h4>სტაბილური</h4>
+                    </div>
+                    <div class="PS-salary">
+                      <h3>ანაზღაურება</h3>
+                      <h4>1500 - 8000 ₾+</h4>
+                    </div>
+                  </div>
+                  <button class="PS-card-info-button">გაიგე მეტი</button>
+                </div>
+              </div>
+            </div>
+            <div class="PS-result-card" data-price="2500">
+              <div class="PS-heart-div">
+                <img src="assets/images/Card-Heart.png" alt="Card-Heart.png" />
+              </div>
+              <img
+                src="assets/images/კომპენსაციებისა და ბენეფიტების მენეჯერი.png"
+                alt="კომპენსაციებისა და ბენეფიტების მენეჯერი.png"
+              />
+              <div class="PS-card-info">
+                <div class="PS-name">
+                  <h1>კომპენსაციებისა და ბენეფიტების მენეჯერი</h1>
+                  <img src="assets/images/Share.png" alt="Share.png" />
+                </div>
+                <div class="PS-card-info-text-button">
+                  <div class="PS-card-info-sub">
+                    <div class="PS-sphere">
+                      <h3>სფერო</h3>
+                      <h4>HR</h4>
+                    </div>
+                    <div class="PS-request">
+                      <h3>მოთხოვნა</h3>
+                      <h4>სტაბილური</h4>
+                    </div>
+                    <div class="PS-salary">
+                      <h3>ანაზღაურება</h3>
+                      <h4>1500 - 2500 ₾+</h4>
+                    </div>
+                  </div>
+                  <button class="PS-card-info-button">გაიგე მეტი</button>
+                </div>
+              </div>
+            </div>
+            <div class="PS-result-card" data-price="5000">
+              <div class="PS-heart-div">
+                <img src="assets/images/Card-Heart.png" alt="Card-Heart.png" />
+              </div>
+              <img
+                src="assets/images/კონცეპტ არტისტი.png"
+                alt="კონცეპტ არტისტი.png"
+              />
+              <div class="PS-card-info">
+                <div class="PS-name">
+                  <h1>კონცეპტ არტისტი</h1>
+                  <img src="assets/images/Share.png" alt="Share.png" />
+                </div>
+                <div class="PS-card-info-text-button">
+                  <div class="PS-card-info-sub">
+                    <div class="PS-sphere">
+                      <h3>სფერო</h3>
+                      <h4>დიზაინი</h4>
+                    </div>
+                    <div class="PS-request">
+                      <h3>მოთხოვნა</h3>
+                      <h4>სტაბილური</h4>
+                    </div>
+                    <div class="PS-salary">
+                      <h3>ანაზღაურება</h3>
+                      <h4>1500 - 5000 ₾+</h4>
+                    </div>
+                  </div>
+                  <button class="PS-card-info-button">გაიგე მეტი</button>
+                </div>
+              </div>
+            </div>
+            <div class="PS-result-card" data-price="3500">
+              <div class="PS-heart-div">
+                <img src="assets/images/Card-Heart.png" alt="Card-Heart.png" />
+              </div>
+              <img
+                src="assets/images/კორპორატიული გაყიდვების მენეჯერი.png"
+                alt="კორპორატიული გაყიდვების მენეჯერი.png"
+              />
+              <div class="PS-card-info">
+                <div class="PS-name">
+                  <h1>კორპორატიული გაყიდვების მენეჯერი</h1>
+                  <img src="assets/images/Share.png" alt="Share.png" />
+                </div>
+                <div class="PS-card-info-text-button">
+                  <div class="PS-card-info-sub">
+                    <div class="PS-sphere">
+                      <h3>სფერო</h3>
+                      <h4>გაყიდვები</h4>
+                    </div>
+                    <div class="PS-request">
+                      <h3>მოთხოვნა</h3>
+                      <h4>მაღალი</h4>
+                    </div>
+                    <div class="PS-salary">
+                      <h3>ანაზღაურება</h3>
+                      <h4>1000 - 3500 ₾+</h4>
+                    </div>
+                  </div>
+                  <button class="PS-card-info-button">გაიგე მეტი</button>
+                </div>
+              </div>
+            </div>
+            <div class="PS-result-card" data-price="5000">
+              <div class="PS-heart-div">
+                <img src="assets/images/Card-Heart.png" alt="Card-Heart.png" />
+              </div>
+              <img src="assets/images/მარკეტერი.png" alt="მარკეტერი.png" />
+              <div class="PS-card-info">
+                <div class="PS-name">
+                  <h1>მარკეტერი</h1>
+                  <img src="assets/images/Share.png" alt="Share.png" />
+                </div>
+                <div class="PS-card-info-text-button">
+                  <div class="PS-card-info-sub">
+                    <div class="PS-sphere">
+                      <h3>სფერო</h3>
+                      <h4>მარკეტინგი</h4>
+                    </div>
+                    <div class="PS-request">
+                      <h3>მოთხოვნა</h3>
+                      <h4>მაღალი</h4>
+                    </div>
+                    <div class="PS-salary">
+                      <h3>ანაზღაურება</h3>
+                      <h4>500 - 5000 ₾+</h4>
+                    </div>
+                  </div>
+                  <button class="PS-card-info-button">გაიგე მეტი</button>
+                </div>
+              </div>
+            </div>
+            <div class="PS-result-card" data-price="8000">
+              <div class="PS-heart-div">
+                <img src="assets/images/Card-Heart.png" alt="Card-Heart.png" />
+              </div>
+              <img
+                src="assets/images/ios დეველოპერი.png"
+                alt="iOS დეველოპერი.png"
+              />
+              <div class="PS-card-info">
+                <div class="PS-name">
+                  <h1>iOS დეველოპერი</h1>
+                  <img src="assets/images/Share.png" alt="Share.png" />
+                </div>
+                <div class="PS-card-info-text-button">
+                  <div class="PS-card-info-sub">
+                    <div class="PS-sphere">
+                      <h3>სფერო</h3>
+                      <h4>IT & DEV</h4>
+                    </div>
+                    <div class="PS-request">
+                      <h3>მოთხოვნა</h3>
+                      <h4>სტაბილური</h4>
+                    </div>
+                    <div class="PS-salary">
+                      <h3>ანაზღაურება</h3>
+                      <h4>500 - 8000 ₾+</h4>
+                    </div>
+                  </div>
+                  <button class="PS-card-info-button">გაიგე მეტი</button>
+                </div>
+              </div>
+            </div>
+            <div class="PS-result-card" data-price="7000">
+              <div class="PS-heart-div">
+                <img src="assets/images/Card-Heart.png" alt="Card-Heart.png" />
+              </div>
+              <img
+                src="assets/images/მონაცემთა ბაზების ადმინისტრატორი.png"
+                alt="მონაცემთა ბაზების ადმინისტრატორი.png"
+              />
+              <div class="PS-card-info">
+                <div class="PS-name">
+                  <h1>მონაცემთა ბაზების ადმინისტრატორი</h1>
+                  <img src="assets/images/Share.png" alt="Share.png" />
+                </div>
+                <div class="PS-card-info-text-button">
+                  <div class="PS-card-info-sub">
+                    <div class="PS-sphere">
+                      <h3>სფერო</h3>
+                      <h4>IT & DEV</h4>
+                    </div>
+                    <div class="PS-request">
+                      <h3>მოთხოვნა</h3>
+                      <h4>მაღალი</h4>
+                    </div>
+                    <div class="PS-salary">
+                      <h3>ანაზღაურება</h3>
+                      <h4>1500 - 7000 ₾+</h4>
+                    </div>
+                  </div>
+                  <button class="PS-card-info-button">გაიგე მეტი</button>
+                </div>
+              </div>
+            </div>
+            <div class="PS-result-card" data-price="3000">
+              <div class="PS-heart-div">
+                <img src="assets/images/Card-Heart.png" alt="Card-Heart.png" />
+              </div>
+              <img
+                src="assets/images/HR რეკრუტერი.png"
+                alt="HR რეკრუტერი.png"
+              />
+              <div class="PS-card-info">
+                <div class="PS-name">
+                  <h1>HR რეკრუტერი</h1>
+                  <img src="assets/images/Share.png" alt="Share.png" />
+                </div>
+                <div class="PS-card-info-text-button">
+                  <div class="PS-card-info-sub">
+                    <div class="PS-sphere">
+                      <h3>სფერო</h3>
+                      <h4>HR</h4>
+                    </div>
+                    <div class="PS-request">
+                      <h3>მოთხოვნა</h3>
+                      <h4>სტაბილური</h4>
+                    </div>
+                    <div class="PS-salary">
+                      <h3>ანაზღაურება</h3>
+                      <h4>800 - 3000 ₾+</h4>
+                    </div>
+                  </div>
+                  <button class="PS-card-info-button">გაიგე მეტი</button>
+                </div>
+              </div>
+            </div>
+            <div class="PS-result-card" data-price="2500">
+              <div class="PS-heart-div">
+                <img src="assets/images/Card-Heart.png" alt="Card-Heart.png" />
+              </div>
+              <img
+                src="assets/images/სოციალური მედია მენეჯერი.png"
+                alt="სოციალური მედია მენეჯერი.png"
+              />
+              <div class="PS-card-info">
+                <div class="PS-name">
+                  <h1>სოციალური მედია მენეჯერი</h1>
+                  <img src="assets/images/Share.png" alt="Share.png" />
+                </div>
+                <div class="PS-card-info-text-button">
+                  <div class="PS-card-info-sub">
+                    <div class="PS-sphere">
+                      <h3>სფერო</h3>
+                      <h4>მარკეტინგი</h4>
+                    </div>
+                    <div class="PS-request">
+                      <h3>მოთხოვნა</h3>
+                      <h4>სტაბილური</h4>
+                    </div>
+                    <div class="PS-salary">
+                      <h3>ანაზღაურება</h3>
+                      <h4>500 - 2500 ₾+</h4>
+                    </div>
+                  </div>
+                  <button class="PS-card-info-button">გაიგე მეტი</button>
+                </div>
+              </div>
+            </div>
+            <div class="PS-result-card" data-price="6000">
+              <div class="PS-heart-div">
+                <img src="assets/images/Card-Heart.png" alt="Card-Heart.png" />
+              </div>
+              <img
+                src="assets/images/შიდა კომუნიკაციების სპეციალისტი.png"
+                alt="შიდა კომუნიკაციების სპეციალისტი.png"
+              />
+              <div class="PS-card-info">
+                <div class="PS-name">
+                  <h1>შიდა კომუნიკაციების სპეციალისტი</h1>
+                  <img src="assets/images/Share.png" alt="Share.png" />
+                </div>
+                <div class="PS-card-info-text-button">
+                  <div class="PS-card-info-sub">
+                    <div class="PS-sphere">
+                      <h3>სფერო</h3>
+                      <h4>მარკეტინგი</h4>
+                    </div>
+                    <div class="PS-request">
+                      <h3>მოთხოვნა</h3>
+                      <h4>სტაბილური</h4>
+                    </div>
+                    <div class="PS-salary">
+                      <h3>ანაზღაურება</h3>
+                      <h4>1500 - 6000 ₾+</h4>
+                    </div>
+                  </div>
+                  <button class="PS-card-info-button">გაიგე მეტი</button>
+                </div>
+              </div>
+            </div>
+            <div class="PS-result-card" data-price="4000">
+              <div class="PS-heart-div">
+                <img src="assets/images/Card-Heart.png" alt="Card-Heart.png" />
+              </div>
+              <img
+                src="assets/images/ციფრული მარკეტერი.png"
+                alt="ციფრული მარკეტერი.png"
+              />
+              <div class="PS-card-info">
+                <div class="PS-name">
+                  <h1>ციფრული მარკეტერი</h1>
+                  <img src="assets/images/Share.png" alt="Share.png" />
+                </div>
+                <div class="PS-card-info-text-button">
+                  <div class="PS-card-info-sub">
+                    <div class="PS-sphere">
+                      <h3>სფერო</h3>
+                      <h4>მარკეტინგი</h4>
+                    </div>
+                    <div class="PS-request">
+                      <h3>მოთხოვნა</h3>
+                      <h4>სტაბილური</h4>
+                    </div>
+                    <div class="PS-salary">
+                      <h3>ანაზღაურება</h3>
+                      <h4>500 - 4000 ₾+</h4>
+                    </div>
+                  </div>
+                  <button class="PS-card-info-button">გაიგე მეტი</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="PS-Footer-div-1">
+        <img src="assets/images/Logo.png" alt="Logo.png" />
+        <div class="PS-Footer-contact-info">
+          <p>591 67 00 67</p>
+          <p>0322 12 10 25</p>
+          <p>info@smartacademy.ge</p>
+          <p>ხდკ</p>
+        </div>
+        <div class="PS-Footer-social-networks">
+          <img
+            src="assets/images/FacebookLogoFooter.svg"
+            alt="FacebookLogoFooter.svg"
+          />
+          <img
+            src="assets/images/LinkedinLogoFooter.svg"
+            alt="LinkedinLogoFooter.svg"
+          />
+          <img
+            src="assets/images/YoutubeLogoFooter.svg"
+            alt="YoutubeLogoFooter.svg"
+          />
+          <img
+            src="assets/images/InstagramLogoFooter.svg"
+            alt="InstagramLogoFooter.svg"
+          />
+          <img
+            src="assets/images/TiktokLogoFooter.svg"
+            alt="TiktokLogoFooter.svg"
+          />
+        </div>
+      </div>
+      <div class="PS-Footer-div-2">
+        <p>2025 Profesia. All rights reserved.</p>
+        <p>Cookie Settings</p>
+      </div>
+    </footer>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
